@@ -24,6 +24,16 @@ public class Business {
 		return dataDao.retrieveAllEmployees();
 	}
 	
+	public int saveEmployee(Employee employee){
+		
+		return dataDao.saveEmployee( employee);
+	}
+	
+	public int updateEmployee(Employee employee){
+		
+		return dataDao.updateEmployee( employee);
+	}
+	
 	/*public List<Employee> retriveAllEmployees(){
 		
 		return jpaRepository.retrieveAllEmployees();

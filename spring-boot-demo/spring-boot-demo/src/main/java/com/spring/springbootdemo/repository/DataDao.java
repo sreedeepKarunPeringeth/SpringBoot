@@ -19,4 +19,15 @@ public class DataDao {
 		
 		return jdbcTemplate.query("Select * from Employee", new BeanPropertyRowMapper<Employee>(Employee.class));
 	}
+	
+	public int saveEmployee(Employee employee){
+		
+		return jdbcTemplate.update("insert into Employee(employeeId,employeeName,employeeDesignation) values (?,?,?)",employee.getEmployeeId(),employee.getEmployeeName(),employee.getEmployeeDesignation());
+	}
+	
+	public int updateEmployee(Employee employee){
+		
+		return jdbcTemplate.update("update  Employee set employeeName= ?, employeeDesignation= ? where employeeId= ?",employee.getEmployeeName(),employee.getEmployeeDesignation(),employee.getEmployeeId());
+	}
+	
 }
