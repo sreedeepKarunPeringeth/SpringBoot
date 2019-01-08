@@ -1,0 +1,150 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring boot practice",
+		"_postman_id": "565dda45-a141-687a-64c8-e77f94edce3f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/getEmployees",
+			"request": {
+				"url": "http://localhost:8080/getEmployees",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get all the employees present in employee table"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/put",
+			"request": {
+				"url": "localhost:8080/put",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"employeeId\": 1,\n\t\"employeeName\": \"name30\",\n\t\"employeeDesignation\": \"ps30\"\n}"
+				},
+				"description": "update the employee info"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/save?id=50&name=name46&designation=psa",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/save?id=50&name=name46&designation=psa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "50",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "name",
+							"value": "name46",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "designation",
+							"value": "psa",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 50,\n\t\"name\": \"name50\",\n\t\"designation\": \"ps50\"\n}"
+				},
+				"description": "insert the employee info in table. uses requestparam "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/save2",
+			"request": {
+				"url": "localhost:8080/save2",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"employeeId\": 40,\n\t\"employeeName\": \"name40\",\n\t\"employeeDesignation\": \"ps40\"\n}"
+				},
+				"description": "insert data in table. uses requestbody "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/delete?id=2",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/delete?id=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "delete the employee info if present from employee table."
+			},
+			"response": []
+		}
+	]
+}
