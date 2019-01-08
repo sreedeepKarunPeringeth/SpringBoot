@@ -3,6 +3,7 @@ package com.spring.springbootdemo.bean;
 
 //@Entity
 //@NamedQuery(name="findAllEmployees", query="select e from Employee e")
+//@NamedQuery(name="saveEmployee", query="")
 public class Employee {
 
 	//@Id

@@ -39,4 +39,9 @@ public class Business {
 		return jpaRepository.retrieveAllEmployees();
 	}*/
 	
+	public List<Employee> deleteEmployee(int id){
+		
+		return dataDao.deleteEmployee(id);
+	}
+	
 }

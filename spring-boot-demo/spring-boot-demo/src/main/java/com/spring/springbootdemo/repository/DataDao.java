@@ -30,4 +30,11 @@ public class DataDao {
 		return jdbcTemplate.update("update  Employee set employeeName= ?, employeeDesignation= ? where employeeId= ?",employee.getEmployeeName(),employee.getEmployeeDesignation(),employee.getEmployeeId());
 	}
 	
+	public List<Employee> deleteEmployee(int id){
+		
+		List<Employee> result = jdbcTemplate.query(" Select * from Employee where employeeId = " + id ,new BeanPropertyRowMapper<Employee>(Employee.class));
+		jdbcTemplate.update("delete from Employee where employeeId = ?", id);
+		return result;
+	} 
+	
 }
